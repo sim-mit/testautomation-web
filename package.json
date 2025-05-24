@@ -1,0 +1,26 @@
+{
+  "name": "testautomation-web",
+  "version": "1.0.0",
+  "description": "Test automation assignment",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sim-mit/testautomation-web.git"
+  },
+  "keywords": [
+    "playwright",
+    "abnamro",
+    "qa"
+  ],
+  "author": "Simona Mitkovska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sim-mit/testautomation-web/issues"
+  },
+  "homepage": "https://github.com/sim-mit/testautomation-web#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.21"
+  }
+}
