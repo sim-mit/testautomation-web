@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Test automation assignment",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "serve -l 3000"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sim-mit/testautomation-web.git"
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/sim-mit/testautomation-web#readme",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
-    "@types/node": "^22.15.21"
+    "@types/node": "^22.15.21",
+    "serve": "^14.2.4"
   }
 }

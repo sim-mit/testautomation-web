@@ -9,6 +9,8 @@ export class LoginPage {
     this.passwordInputField = page.locator("input#password");
     this.loginButton = page.locator("input#login");
     this.userIcon = page.locator("section#user");
+    this.footerText = page.locator("//p[text()='Thank you for participating!']");
+    this.background = page.locator("section#login");
   }
 
   async fillCredentials(email, password) {

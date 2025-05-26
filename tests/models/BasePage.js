@@ -8,7 +8,7 @@ export class BasePage {
   }
 
   async goto() {
-    await this.page.goto("http://localhost:5500/");
+    await this.page.goto("/");
   }
 
 }
