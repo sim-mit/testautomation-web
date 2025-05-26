@@ -27,7 +27,7 @@ test.describe("login page content", () => {
     })
 
     test("verify footer visibility", async ({ page }) => {
-        await expect(login.footerText).toBeVisible();
+        await expect(base.footerText).toBeVisible();
     })
 
     test("verify background", async ({ page }) => {
