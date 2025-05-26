@@ -6,7 +6,4 @@ export class HomePage {
     this.page = page;
     this.userIcon = page.locator("section#user");
   }
-
- 
-
 }
