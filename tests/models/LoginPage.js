@@ -1,3 +1,6 @@
+/**
+ * LoginPage model for the home page of the application.
+ */
 export class LoginPage {
 
   constructor(page) {
@@ -10,11 +13,19 @@ export class LoginPage {
     this.background = page.locator("section#login");
   }
 
+  /**
+   * Function for inputing email address and password in the input fields.
+   * @param {string} email 
+   * @param {string} password 
+   */
   async fillCredentials(email, password) {
     await this.emailInputField.fill(email);
     await this.passwordInputField.fill(password);
   }
 
+  /**
+   * Function for clicking on the login button.
+   */
   async clickLogin() {
     await this.loginButton.click();
   }

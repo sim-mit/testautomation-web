@@ -4,7 +4,9 @@
   "description": "Test automation assignment",
   "main": "index.js",
   "scripts": {
-    "start": "serve -l 3000"
+    "start": "serve -l 3000",
+    "test": "npx playwright test",
+    "test-ui": "npx playwright test --ui"
   },
   "repository": {
     "type": "git",

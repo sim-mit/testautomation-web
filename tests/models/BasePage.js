@@ -1,3 +1,6 @@
+/**
+ * BasePage class for shared functionality.
+ */
 export class BasePage {
 
     constructor(page) {
@@ -5,6 +8,9 @@ export class BasePage {
         this.footerText = page.locator("//p[text()='Thank you for participating!']");
     }
 
+    /**
+     * Function for navigating to the base page.
+     */
     async goto() {
         await this.page.goto("/");
     }
