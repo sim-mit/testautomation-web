@@ -30,24 +30,24 @@ test.describe("nav bar", async () => {
         const contactIcon = await page.locator("div.contact i");
         const contactText = await page.locator("div.contact").textContent();
 
-        expect(homeIcon).toHaveClass(/fa-home/);
-        expect(homeText.trim()).toEqual("Home");
-        expect(productsIcon).toHaveClass(/fa-tag/);
-        expect(productsText.trim()).toEqual("Products");
-        expect(contactIcon).toHaveClass(/fa-envelope/);
-        expect(contactText.trim()).toEqual("Contact");
+        await expect(homeIcon).toHaveClass(/fa-home/);
+        await expect(homeText.trim()).toEqual("Home");
+        await expect(productsIcon).toHaveClass(/fa-tag/);
+        await expect(productsText.trim()).toEqual("Products");
+        await expect(contactIcon).toHaveClass(/fa-envelope/);
+        await expect(contactText.trim()).toEqual("Contact");
     })
 
-    test("verify user circle element on nav bar - visible and interactable", async ({ page }) => {
+    test("verify user circle element on nav bar - visible and interactable", async () => {
         await expect(home.userIcon).toBeVisible();
 
         await home.userIcon.click();
-        expect(home.logoutMenu).toBeVisible();
+        await expect(home.logoutMenu).toBeVisible();
         await home.userIcon.click();
-        expect(home.logoutMenu).not.toBeVisible();
+        await expect(home.logoutMenu).not.toBeVisible();
     })
 
-    test("verify logout functionality", async ({ page }) => {
+    test("verify logout functionality", async () => {
         await home.userIcon.click();
         await home.logoutMenu.click();
         await expect(login.emailInputField).toBeVisible();
@@ -68,7 +68,7 @@ test.describe("page content", async () => {
         await login.clickLogin();
     })
 
-    test("verify text structure", async ({ page }) => {
+    test("verify text structure", async () => {
         await expect(home.pageContent).toBeVisible();
 
         const paragraphs = await home.pageContent.locator('p');
@@ -76,7 +76,7 @@ test.describe("page content", async () => {
         expect(paragraphNumber).toEqual(3);
     })
 
-    test("verify page text", async ({ page }) => {
+    test("verify page text", async () => {
         const paragraphs = await home.pageContent.locator('p');
         const paragraphContents = await paragraphs.allTextContents();
 
@@ -106,14 +106,13 @@ test.describe("page content", async () => {
         expect(paragraphContents[2]).toEqual(thirdParagraph);
     })
 
-    test("verify footer visibility", async ({ page }) => {
+    test("verify footer visibility", async () => {
         await expect(base.footerText).toBeVisible();
     })
 
-    test("verify background", async ({ page }) => {
+    test("verify background", async () => {
         const regex = /\/img\/bg2\.jpg/;
 
         await expect(home.background).toHaveCSS("background", regex);
     })
 })
-

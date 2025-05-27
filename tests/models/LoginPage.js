@@ -1,5 +1,3 @@
-import { expect } from '@playwright/test';
-
 export class LoginPage {
 
   constructor(page) {
@@ -17,7 +15,7 @@ export class LoginPage {
     await this.passwordInputField.fill(password);
   }
 
-  async clickLogin(){
+  async clickLogin() {
     await this.loginButton.click();
   }
 }
