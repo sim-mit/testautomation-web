@@ -1,5 +1,3 @@
-import { expect } from '@playwright/test';
-
 export class LoginPage {
 
   constructor(page) {
@@ -9,7 +7,6 @@ export class LoginPage {
     this.passwordInputField = page.locator("input#password");
     this.loginButton = page.locator("input#login");
     this.userIcon = page.locator("section#user");
-    this.footerText = page.locator("//p[text()='Thank you for participating!']");
     this.background = page.locator("section#login");
   }
 
@@ -18,7 +15,7 @@ export class LoginPage {
     await this.passwordInputField.fill(password);
   }
 
-  async clickLogin(){
+  async clickLogin() {
     await this.loginButton.click();
   }
 }
