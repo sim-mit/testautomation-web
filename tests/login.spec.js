@@ -7,7 +7,7 @@ import { HomePage } from "./models/HomePage";
 test.describe("login page content", () => {
     let base;
     let login;
-    
+
     test.beforeEach(async ({ page }) => {
         base = new BasePage(page);
         login = new LoginPage(page);
@@ -32,6 +32,7 @@ test.describe("login page content", () => {
     })
 
     test("verify background", async () => {
+        // Using regex because the background css property has different values for different browsers
         const regex = /\/img\/bg1\.jpg/;
 
         await expect(login.background).toHaveCSS("background", regex);
@@ -39,6 +40,7 @@ test.describe("login page content", () => {
 })
 
 test.describe("valid logins", () => {
+    // Loops through the test users array, and attempts to log in with each one
     users.forEach((user) => {
         test("verify login with valid credentials " + user.email, async ({ page }) => {
             const base = new BasePage(page);
@@ -103,6 +105,7 @@ test.describe("edge cases", () => {
         await expect(home.userIcon).not.toBeVisible();
     })
 
+    // Emails are usually not case sensitive. This needs to be fixed.
     test("verify login with case sensitive username and password", async () => {
         test.fixme(true, "case sensitivity not implemented");
         await login.fillCredentials("Biancunha@gmail.com", users[1].password);
@@ -110,8 +113,10 @@ test.describe("edge cases", () => {
         await expect(home.userIcon).toBeVisible();
     })
 
+    // Invalid special characters and empty spaces should not be accepted in the email field.
+    // The input field should have a validation for invalid email addresses.
     test("verify login with special characters and empty spaces", async () => {
-        await login.fillCredentials("adm!n@admin.com ", "123#");
+        await login.fillCredentials("adm!n@admin.com ", "1234");
         await login.clickLogin();
         await expect(home.userIcon).not.toBeVisible();
     })

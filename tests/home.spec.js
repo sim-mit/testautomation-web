@@ -48,8 +48,7 @@ test.describe("nav bar", async () => {
     })
 
     test("verify logout functionality", async () => {
-        await home.userIcon.click();
-        await home.logoutMenu.click();
+        await home.logout();
         await expect(login.emailInputField).toBeVisible();
     })
 })
@@ -111,6 +110,7 @@ test.describe("page content", async () => {
     })
 
     test("verify background", async () => {
+        // Using regex because the background css property has different values for different browsers
         const regex = /\/img\/bg2\.jpg/;
 
         await expect(home.background).toHaveCSS("background", regex);
