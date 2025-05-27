@@ -1,18 +1,66 @@
+# 📦 Playwright Test Suite for ABN AMRO QA Assessment
+
 [![Playwright Tests](https://github.com/sim-mit/testautomation-web/actions/workflows/playwright.yml/badge.svg)](https://github.com/sim-mit/testautomation-web/actions/workflows/playwright.yml)
 
-# Test assignment
-We are looking for Automation Engineers that have the mindset "only the sky is the limit"
-and "automation doesn't stop at testing, it's just a beginning!" ;)
+Page-Object-Model-based test suite (JavaScript + Playwright) for a single-page example app.
 
-The purpose of this test assignment is to assess the applicant's automation skills, allowing him/her to show the best they can do and how fast they can learn.
-It is an open assignment. There is no the right answer and there is no end goal other than proving yourself. Surprise us!
+[Test Plan (Google Docs)](https://docs.google.com/document/d/1teMDMF6OIJvw8hJnfM8fnCjrFpjXgM78mf1n_v_dq50/edit?usp=sharing)
 
-Make sure that you give detailed comments or descriptions of your tests.
-When the assignment is complete, please push your solution to Github(Gitlab) and send us the link.
-If you have any questions, please contact us back.
+---
 
-Good luck!
+## 🎬 HappyFlow Demo
 
-PS. We don't expect you to spend weeks (and sleepless nights) on doing it. Lets see how far you can get in 6-10 hours. We want to see how you approach and solve problems.
+![Login Flow Demo](.github/assets/AutomationHappyFlow.gif)
 
-And you will find the users to login in users.js.
+---
+
+## 🚀 Features
+
+- **Login Page:** Testing the login functionality and the structure of the login page.
+- **Home Page:** Testing the log out functionality and the structure of the home page and navigation bar.
+- **Edge-Case Coverage:** Empty fields, invalid creds, SQL injections, etc.
+- **Page Object Model:** Clear separation of page structure and test logic.  
+- **CI Pipeline Integration:** Tests that run successfully in GitHub pages.  
+- **Reporting:** HTML reports in the pipeline.
+
+---
+
+## 📋 Prerequisites
+
+- Node.js LTS (v20+ recommended)  
+- npm
+- Git
+
+---
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/sim-mit/testautomation-web.git
+cd testautomation-web
+npm install
+```
+
+## ⚡ Quick Start
+
+### Run locally (headed):
+```bash
+npx playwright test --headed
+```
+### Run headless & generate HTML report:
+```bash
+npx playwright test
+npx playwright show-report
+```
+### Run tests with Playwright UI:
+```bash
+npx playwright test --ui
+```
+
+## 🔁 CI/CD Pipeline
+I generated GitHub Actions configuration that works out of the box for CI/CD pipeline integration.
+[Pipeline](https://github.com/sim-mit/testautomation-web/actions)
+
+Each pipeline run generates a report that can be downloaded from the artifacts section in the run.
+[Example pipeline run](https://github.com/sim-mit/testautomation-web/actions/runs/15280543599)
+
