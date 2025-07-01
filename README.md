@@ -1,6 +1,6 @@
 # 📦 Playwright Test Suite for Test Bank demo page
 
-[![Playwright Tests](https://github.com/sim-mit/testautomation-web/actions/workflows/playwright.yml/badge.svg)](https://github.com/sim-mit/testautomation-web/actions/workflows/playwright.yml)
+[![Playwright Tests](https://github.com/sim-mit/testbank-test-automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/sim-mit/testbank-test-automation/actions/workflows/playwright.yml)
 
 Page-Object-Model-based test suite (JavaScript + Playwright) for a single-page example app.
 
@@ -36,8 +36,8 @@ Page-Object-Model-based test suite (JavaScript + Playwright) for a single-page e
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/sim-mit/testautomation-web.git
-cd testautomation-web
+git clone https://github.com/sim-mit/testbank-test-automation.git
+cd testbank-test-automation
 npm install
 ```
 
@@ -59,8 +59,8 @@ npx playwright test --ui
 
 ## 🔁 CI Pipeline
 I generated GitHub Actions configuration that works out of the box for CI/CD pipeline integration.
-[Pipeline](https://github.com/sim-mit/testautomation-web/actions)
+[Pipeline](https://github.com/sim-mit/testbank-test-automation/actions)
 
 Each pipeline run generates a report that can be downloaded from the artifacts section in the run.
-[Example pipeline run](https://github.com/sim-mit/testautomation-web/actions/runs/15280543599)
+[Example pipeline run](https://github.com/sim-mit/testbank-test-automation/actions/runs/15280543599)
 

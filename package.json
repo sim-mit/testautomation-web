@@ -1,5 +1,5 @@
 {
-  "name": "testautomation-web",
+  "name": "testbank-test-automation",
   "version": "1.0.0",
   "description": "Test automation assignment",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sim-mit/testautomation-web.git"
+    "url": "git+https://github.com/sim-mit/testbank-test-automation.git"
   },
   "keywords": [
     "playwright",
@@ -20,9 +20,9 @@
   "author": "Simona Mitkovska",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sim-mit/testautomation-web/issues"
+    "url": "https://github.com/sim-mit/testbank-test-automation/issues"
   },
-  "homepage": "https://github.com/sim-mit/testautomation-web#readme",
+  "homepage": "https://github.com/sim-mit/testbank-test-automation#readme",
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.21",
